@@ -39,6 +39,8 @@ namespace burgershack
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
             services.AddTransient<BurgerService>();
             services.AddTransient<BurgerRepository>();
+            services.AddTransient<FriesService>();
+            services.AddTransient<FriesRepository>();
         }
 
         private IDbConnection CreateDbConnection()
